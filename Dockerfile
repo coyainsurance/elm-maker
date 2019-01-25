@@ -15,7 +15,7 @@ RUN make && make install
 FROM node:10-slim
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends netbase && \
+    apt-get install -y --no-install-recommends netbase build-essential && \
     rm -rf /var/lib/apt/lists/*
 
 ENV PATH=/workspace/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
